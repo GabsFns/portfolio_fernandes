@@ -1,0 +1,18 @@
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+// Mixin para centralizar flex
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
