@@ -1,0 +1,23 @@
+@use '../../styles/typography' as *;
+.header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-secondary;
+    letter-spacing: 3px;
+
+    ul{
+        display: flex;
+        gap: 60px;
+        font-size: 16px;
+        
+    }
+    hr{
+        width: 95%;
+        height: 1px;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Goldman;
+    src: url(../assets/fonts/Goldman-Regular.ttf)format('truetype');
+}
+@font-face {
+    font-family: Sora;
+    src: url(../assets/fonts/Sora-VariableFont_wght.ttf)format('truetype');
+}
+@font-face {
+    font-family: TurretRoad;
+    src: url(../assets/fonts/TurretRoad-Regular.ttf)format('truetype');
+}
+
+$font-primary: 'Sora', sans-serif;
+$font-secondary: 'Goldman', sans-serif;
+$font-tertiary: 'TurretRoad', sans-serif;
