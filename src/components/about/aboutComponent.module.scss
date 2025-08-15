@@ -1,0 +1,35 @@
+@use '../../styles/typography' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/global.scss' as *;
+
+.container{
+width: 1800px;
+margin: auto;
+    h2{
+        text-align: left;
+        font-family: $font-secondary;
+        letter-spacing: 2px;
+        margin: 90px 0px 90px 90px;
+    }
+    section{
+      display: flex;
+      justify-content: space-between;
+   
+    }
+
+    .roadmapContainer{
+      margin-right: 300px;
+    }
+
+    .cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 150px;
+
+  /* seleciona o segundo filho direto do container */
+  :global(.ExpandableCard:nth-child(2)) {
+    margin-left: 100px;
+  }
+}
+    }

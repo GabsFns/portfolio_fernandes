@@ -1,9 +1,10 @@
-import Header from './components/header/header';
+
 import './styles/global.scss';
+import Home from './pages/home/home';
 function App() {
   return (
     <>
-     <Header />
+     <Home/>
     </>
   )
 }

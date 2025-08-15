@@ -1,0 +1,26 @@
+@use '../../styles/typography' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/global.scss' as *;
+
+.containerPrincipalWork{
+    width: 1800px;
+    margin: auto;
+    margin-top: 170px;
+}
+
+.containerWork{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $color-1;
+    padding: 30px;
+    margin: 30px 90px;
+    font-family: $font-primary;
+}
+.worksTitle{
+    text-align: left;
+    font-family: $font-secondary;
+    letter-spacing: 3px;
+    margin-left: 90px;
+    font-size: 20px;
+}

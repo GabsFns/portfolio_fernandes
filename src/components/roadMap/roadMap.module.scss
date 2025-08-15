@@ -1,0 +1,62 @@
+@use '../../styles/typography' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/global.scss' as *;
+
+.containerRoad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h4, p{
+        font-family: $font-primary;
+    }
+
+    hr{
+        width: 6px;
+        height: 110px;
+        background-color: $color-2;
+        margin: 0;
+    }
+    .circle1{
+        padding: 24px;
+        border-radius: 50%;
+        background-color: $color-2;
+           margin-left: 255px;
+    }
+     .circle2, .circle3{
+        padding: 24px;
+        border-radius: 50%;
+        background-color: $color-3;
+    }
+    .circle3{
+        margin-left: 237px;
+    }
+    .circle2{
+        margin-right: 192px;
+    }
+    .quad1, .quad2, .quad3{
+         padding: 10px;
+         width: 70px;
+         background-color: $color-7;
+    }
+    
+    .quad1{
+        margin-left: 343px;
+    }
+    .quad2{
+        margin-left: 325px;
+    }
+    .quad3{
+        margin-right: 296px;
+    }
+    .hrSpan{
+        height: 40px;
+    }
+    .containerText{
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+     
+    }
+}
+

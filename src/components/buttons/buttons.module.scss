@@ -1,0 +1,40 @@
+@use '../../styles/typography' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/global.scss' as *;
+
+.custom-button {
+  padding: 10px;
+  width: 240px;
+  border: none;
+  font-size: 12px;
+  border-radius: 20px;
+  color: white;
+  
+  cursor: pointer;
+}
+
+.color-1 {
+  background-color: $color-1;
+}
+
+.color-2 {
+  background-color: $color-2;
+}
+
+.color-3 {
+  background-color: $color-3;
+}
+
+.color-4 {
+  background-color: $color-4;
+  color: black;
+}
+
+.color-5 {
+  background-color: $color-5;
+  color: black;
+}
+
+.color-6 {
+  background-color: $color-6;
+}

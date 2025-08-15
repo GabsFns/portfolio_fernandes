@@ -1,0 +1,65 @@
+@use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/global.scss" as *;
+
+.NavProjects {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.containerProject {
+  display: flex;
+  justify-content: space-between;
+width: 1500px;
+margin: auto;
+  margin-top: 40px;
+
+  .navContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.titleProject {
+  font-size: 20px;
+  font-family: $font-secondary;
+  margin-left: 90px;
+  margin-top: 200px;
+}
+
+.containerProjectPrincipal {
+  width: 1800px;
+  margin: auto;
+}
+.cardsContainer{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 16px;
+  
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    width: 600px;
+    height: 300px;
+    padding: 20px;
+    h4{
+        font-family: $font-secondary;
+        letter-spacing: 3px;
+        font-size: 28px;
+    }
+    p{
+        font-family: $font-primary;
+
+    }
+    .buttonCardView{
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+
+    }
+   
+
+}
