@@ -6,9 +6,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+     @media (max-width: 480px) {
+      width: 70px;
+      margin: auto;
+    }
 
     h4, p{
         font-family: $font-primary;
+          @media (max-width: 480px) {
+      
+    }
     }
 
     hr{
@@ -22,6 +29,11 @@
         border-radius: 50%;
         background-color: $color-2;
            margin-left: 255px;
+
+           
+      @media (max-width: 480px) {
+       margin-left: 120px;
+    }
     }
      .circle2, .circle3{
         padding: 24px;
@@ -30,9 +42,15 @@
     }
     .circle3{
         margin-left: 237px;
+          @media (max-width: 480px) {
+       margin-left: 90px;
+    }
     }
     .circle2{
         margin-right: 192px;
+           @media (max-width: 480px) {
+          margin-right: 82px;
+    }
     }
     .quad1, .quad2, .quad3{
          padding: 10px;
@@ -42,12 +60,21 @@
     
     .quad1{
         margin-left: 343px;
+            @media (max-width: 480px) {
+       margin-left: 130px;
+    }
     }
     .quad2{
         margin-left: 325px;
+            @media (max-width: 480px) {
+       margin-left: 130px;
+    }
     }
     .quad3{
         margin-right: 296px;
+            @media (max-width: 480px) {
+       margin-right: 156px;
+    }
     }
     .hrSpan{
         height: 40px;

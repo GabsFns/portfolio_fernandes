@@ -12,13 +12,25 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 1500px; // largura máxima
+  max-width: 1500px;
   width: 100%;
   margin: 40px auto 0 auto;
   padding: 0 20px;
 
   .navContainer {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: 480px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0px;
+    align-items: center;
     flex-direction: column;
     gap: 20px;
   }
@@ -40,15 +52,29 @@
   width: 100%;
   margin: auto;
   padding: 0 20px;
+
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+  }
 }
 
+/* GRID FIXA: 2 por 2 no desktop, 1 por linha no mobile */
 .cardsContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); // duas colunas no desktop
+  grid-template-columns: 1fr 1fr; // 2 colunas no desktop
   gap: 16px;
 
   @media (max-width: 1024px) {
-    grid-template-columns: 1fr; // uma coluna no tablet/mobile
+    grid-template-columns: 1fr; // 1 coluna em tablet
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; // 1 coluna no mobile
+    justify-items: center; // centraliza os cards menores
   }
 }
 
@@ -57,9 +83,8 @@
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid black;
-  width: 90%;
-  min-width: 500px; // ocupa 100% da coluna do grid
-  height: 240px; // ajusta conforme conteúdo
+  width: 100%; // ocupa toda a coluna do grid
+  height: 240px;
   padding: 20px;
   box-sizing: border-box;
 
@@ -80,16 +105,18 @@
   }
 
   @media (max-width: 768px) {
+    height: auto;
     h4 {
       font-size: 22px;
     }
   }
 
   @media (max-width: 480px) {
+    width: 330px; // cards menores no mobile
+    height: auto;
     h4 {
       font-size: 18px;
     }
-
     .buttonCardView {
       width: 60px;
       height: 60px;

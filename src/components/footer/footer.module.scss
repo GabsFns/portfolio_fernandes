@@ -21,6 +21,7 @@ footer {
     @media (max-width: 1024px) {
       flex-direction: column;
       margin-top: 100px;
+      align-items: center;
     }
   }
 
@@ -51,6 +52,11 @@ footer {
 
   .subAbaCargos {
     font-family: $font-secondary;
+     @media (max-width: 480px) {
+      display: flex;
+      align-items: center;
+      
+      }
   }
 
   .subAba {
@@ -58,6 +64,12 @@ footer {
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
+       @media (max-width: 480px) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      }
+
   }
 
   .subAbaNav {
@@ -66,6 +78,8 @@ footer {
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
+
+     
 
     ul {
       display: flex;
@@ -77,7 +91,7 @@ footer {
       font-size: 24px;
 
       @media (max-width: 480px) {
-        flex-direction: column;
+        justify-content: space-around;
         align-items: center;
         font-size: 18px;
       }
@@ -98,10 +112,12 @@ footer {
       }
 
       @media (max-width: 480px) {
-        min-height: 250px;
+        min-height: 350px;
+        width: 300px;
         padding: 20px;
       }
     }
+    
   }
 
   .subAbaFinalNav {
@@ -115,6 +131,7 @@ footer {
       gap: 20px;
       flex-direction: column;
       align-items: center;
+      display: none;
     }
   }
 
@@ -133,5 +150,12 @@ footer {
     border-radius: 50%;
     margin: 100px auto 0 auto;
     position: absolute; // melhor do que absolute pra responsivo
+
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
+   @media (max-width: 480px) {
+      align-items: center;
+    }
 }

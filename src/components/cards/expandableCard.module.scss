@@ -22,12 +22,18 @@
     font-family: $font-primary;
     font-weight: 300;
     font-size: 20px;
+     @media (max-width: 480px) {
+         font-size: 14px;
+    }
   }
 
   p {
     font-size: 18x;
     color: #333;
     font-family: $font-primary;
+    @media (max-width: 480px) {
+         font-size: 10px;
+    }
   }
 
   .details {
@@ -39,6 +45,12 @@
     transition: all 0.3s ease;
     font-family: $font-primary;
   }
+
+    @media (max-width: 480px) {
+          width: 350px;
+          
+    
+    }
   
 }
 
@@ -46,6 +58,11 @@
   width: 600px; // ou aumentar se quiser
   height: 400px;
   background-color: $color-3;
+
+    @media (max-width: 480px) {
+          width: 350px;
+           height: 250px;
+    }
 }
 
 .smallButton {

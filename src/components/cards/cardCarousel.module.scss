@@ -11,8 +11,21 @@
   padding: 20px;
   margin: 0 auto;
 
+
+
+  @media (max-width: 480px) {
+          .swiper-wrapper{
+            display: flex;
+            gap: 40px;
+          }
+    
+    }
+
+
  .swiper {
     padding-bottom: 40px;
+
+    
   }
 
 :global(.swiper-slide) {
@@ -49,13 +62,19 @@
     background-color: $color-3;
     color: #fff;
   }
+  @media (max-width: 480px) {
+          display: none;
+    
+    }
 }
+ 
+
 }
 
 
 .card {
     display: flex;
-flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: flex-end;
   background-color: #dddddd;
   border-radius: 60px;
@@ -77,6 +96,12 @@ flex-wrap: wrap;
     display: flex;
     flex-direction: column;
     align-items: first baseline;
+       @media (max-width: 480px) {
+          
+          border-radius: 0px 20px 20px 0px;
+        
+    
+    }
   }
 
   h3 {
@@ -86,6 +111,10 @@ flex-wrap: wrap;
     font-weight: 300;
     color: white;
     letter-spacing: 1px;
+      @media (max-width: 480px) {
+          font-size: 12px;
+    
+    }
   }
 
   p {
@@ -96,6 +125,17 @@ flex-wrap: wrap;
     font-weight: 200;
     letter-spacing: 1px;
     margin-bottom: 70px;
-
+  @media (max-width: 480px) {
+          font-size: 10px;
+    
+    }
   }
+
+  @media (max-width: 480px) {
+          width: 200px;
+          height: 100px;
+          border-radius: 20px;
+        
+    
+    }
 }

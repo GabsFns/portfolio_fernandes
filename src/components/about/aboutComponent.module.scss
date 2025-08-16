@@ -36,6 +36,7 @@
     @media (max-width: 1024px) {
       flex: 1 1 100%; // tablet e mobile ocupam linha inteira
     }
+
   }
 
   .cardContainer {
@@ -53,10 +54,16 @@
         margin-left: 0;
       
       }
+
+      
     }
 
     @media (max-width: 1024px) {
       flex: 1 1 100%;
+    }
+
+    @media (max-width: 480px) {
+      align-items: center;
     }
   }
 }
