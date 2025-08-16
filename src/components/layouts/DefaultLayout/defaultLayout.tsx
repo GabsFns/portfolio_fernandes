@@ -4,6 +4,8 @@ import CardCarousel from "../../cards/cardCarousel";
 import AboutComponent from "../../about/aboutComponent";
 import Works from "../../works/works";
 import ProjectComponent from "../../project/projectComponent";
+import ContactComponent from "../../contact/contactComponent";
+import FooterComp from "../../footer/footer";
 export default function defaultLayout() {
   return (
     <div className="default-layout">
@@ -13,6 +15,8 @@ export default function defaultLayout() {
       <AboutComponent/>
       <Works/>
       <ProjectComponent/>
+      <ContactComponent/>
+      <FooterComp/>
       <main>
       </main>
     </div>

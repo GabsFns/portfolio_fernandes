@@ -1,0 +1,74 @@
+@use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/global.scss" as *;
+
+.contactContainer {
+  padding: 200px 90px 0 90px;
+  width: 100%;
+  max-width: 1800px; // mantém tamanho no desktop, mas permite reduzir
+  margin: auto;
+
+  h3 {
+    font-size: 20px;
+    font-family: $font-secondary;
+    letter-spacing: 2px;
+    margin-bottom: 70px;
+
+    @media (max-width: 768px) {
+      font-size: clamp(1rem, 4vw, 1.25rem);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+
+  .containerCaixa {
+    border: 1px solid $color-4;
+    border-radius: 40px;
+    width: 100%; // ocupa toda a largura disponível
+    max-width: 800px; // mantém limite no desktop
+    height: auto; // deixa a altura ajustar no mobile
+    margin-left: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; // permite quebrar no mobile
+
+    @media (max-width: 1024px) {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
+
+  .containerSubCaixa {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  .subCaixa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    font-family: $font-secondary;
+    letter-spacing: 2px;
+    font-size: 18px;
+
+    @media (max-width: 768px) {
+      font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    }
+  }
+
+  .buttonCurriculo {
+    width: 100%;
+    max-width: 330px; // mantém tamanho máximo
+    height: 50px;
+    margin-top: 100px;
+
+    @media (max-width: 768px) {
+      margin-top: 40px;
+      height: 45px;
+    }
+  }
+}

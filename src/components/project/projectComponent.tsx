@@ -1,4 +1,4 @@
-import { style } from "framer-motion/client";
+
 import CustomButton from "../buttons/buttons";
 import styles from "./projectComponent.module.scss";
 import { useState } from "react";

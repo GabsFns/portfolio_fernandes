@@ -2,25 +2,63 @@
 @use '../../styles/variables' as *;
 @use '../../styles/global.scss' as *;
 
-.containerPrincipalWork{
-    width: 1800px;
-    margin: auto;
-    margin-top: 170px;
+.containerPrincipalWork {
+  max-width: 1800px; // agora é no máximo 1800px
+  width: 100%;
+  margin: 170px auto 0 auto;
+  padding: 0 20px; // espaço lateral para telas menores
 }
 
-.containerWork{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid $color-1;
-    padding: 30px;
-    margin: 30px 90px;
-    font-family: $font-primary;
+.containerWork {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid $color-1;
+  padding: 30px;
+  margin: 30px auto;
+  font-family: $font-primary;
+  box-sizing: border-box;
 }
-.worksTitle{
-    text-align: left;
-    font-family: $font-secondary;
-    letter-spacing: 3px;
-    margin-left: 90px;
-    font-size: 20px;
+
+.worksTitle {
+  text-align: left;
+  font-family: $font-secondary;
+  letter-spacing: 3px;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+/* 📱 Responsividade */
+@media (max-width: 1024px) {
+  .containerWork {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerPrincipalWork {
+    margin-top: 100px;
+    padding: 0 10px;
+  }
+
+  .worksTitle {
+    margin-left: 0;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .containerWork {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .worksTitle {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
 }

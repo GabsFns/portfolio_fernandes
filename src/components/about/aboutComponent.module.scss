@@ -2,34 +2,61 @@
 @use '../../styles/variables' as *;
 @use '../../styles/global.scss' as *;
 
-.container{
-width: 1800px;
-margin: auto;
-    h2{
-        text-align: left;
-        font-family: $font-secondary;
-        letter-spacing: 2px;
-        margin: 90px 0px 90px 90px;
+.container {
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  padding: 0 1rem;
+
+  h2 {
+    text-align: left;
+    font-family: $font-secondary;
+    letter-spacing: 2px;
+    margin: 90px 0 90px 90px;
+
+    @media (max-width: 768px) {
+      margin: 40px 0 40px 20px;
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      text-align: center;
     }
-    section{
-      display: flex;
-      justify-content: space-between;
-   
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap; // quebra no mobile
+    gap: 2rem; // espaço entre roadmap e cards
+    justify-content: space-between;
+  }
+
+  .roadmapContainer {
+    flex: 1 1 40%; // ocupa até 40% no desktop
+    min-width: 300px; // não encolhe demais
+    margin-right: 0; // removi fixo
+
+    @media (max-width: 1024px) {
+      flex: 1 1 100%; // tablet e mobile ocupam linha inteira
+    }
+  }
+
+  .cardContainer {
+    flex: 1 1 50%; // ocupa até 50% no desktop
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 0; // removi fixo
+
+    :global(.ExpandableCard:nth-child(2)) {
+      margin-left: 50px;
+
+      @media (max-width: 768px) {
+        margin-left: 0;
+      
+      }
     }
 
-    .roadmapContainer{
-      margin-right: 300px;
+    @media (max-width: 1024px) {
+      flex: 1 1 100%;
     }
-
-    .cardContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-left: 150px;
-
-  /* seleciona o segundo filho direto do container */
-  :global(.ExpandableCard:nth-child(2)) {
-    margin-left: 100px;
   }
 }
-    }

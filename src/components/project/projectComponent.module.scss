@@ -7,59 +7,92 @@
   height: 70px;
   border-radius: 50%;
 }
+
 .containerProject {
   display: flex;
   justify-content: space-between;
-width: 1500px;
-margin: auto;
-  margin-top: 40px;
+  flex-wrap: wrap;
+  max-width: 1500px; // largura máxima
+  width: 100%;
+  margin: 40px auto 0 auto;
+  padding: 0 20px;
 
-  .navContainer{
+  .navContainer {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
 }
+
 .titleProject {
   font-size: 20px;
   font-family: $font-secondary;
-  margin-left: 90px;
-  margin-top: 200px;
+  margin: 200px 0 0 90px;
+
+  @media (max-width: 768px) {
+    margin: 40px 0 20px 0;
+    text-align: center;
+  }
 }
 
 .containerProjectPrincipal {
-  width: 1800px;
+  max-width: 1800px;
+  width: 100%;
   margin: auto;
+  padding: 0 20px;
 }
-.cardsContainer{
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   gap: 16px;
-  
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // duas colunas no desktop
+  gap: 16px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr; // uma coluna no tablet/mobile
+  }
 }
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid black;
-    width: 600px;
-    height: 300px;
-    padding: 20px;
-    h4{
-        font-family: $font-secondary;
-        letter-spacing: 3px;
-        font-size: 28px;
-    }
-    p{
-        font-family: $font-primary;
 
-    }
-    .buttonCardView{
-        width: 70px;
-        height: 70px;
-        border-radius: 20px;
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  width: 90%;
+  min-width: 500px; // ocupa 100% da coluna do grid
+  height: 240px; // ajusta conforme conteúdo
+  padding: 20px;
+  box-sizing: border-box;
 
-    }
-   
+  h4 {
+    font-family: $font-secondary;
+    letter-spacing: 3px;
+    font-size: 28px;
+  }
 
+  p {
+    font-family: $font-primary;
+  }
+
+  .buttonCardView {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 768px) {
+    h4 {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h4 {
+      font-size: 18px;
+    }
+
+    .buttonCardView {
+      width: 60px;
+      height: 60px;
+    }
+  }
 }
